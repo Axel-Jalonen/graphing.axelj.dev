@@ -9,12 +9,18 @@
     <title>axelj.dev > webgl-graphing</title>
 </head>
 <body>
-    <div id="point_follower">Scale: 10</div>
-    <input id="eq"></input>
-    <input id="slider" type="range" min="1" max="10000"></input>
-    <div id="point_count"></div>
-    <div id="verticalLine"></div>
-    <div id="horizontalLine"></div>
+    <label for="ui-toggle" id="ui-toggle-label">Hide UI</label>
+    <input id="ui-toggle" type="checkbox" title="hide-ui"></input>
+    <div id="ui">
+      <div id="scale-display">Scale: 10</div>
+      <input id="equation-input" type="text"></input>
+      <div id="point-count">Points: 5000</div>
+      <input id="point-count-input" value="2500" type="range" min="1" max="10000"></input>
+    </div>
+
+    <div class="axis-marker" id="vertical-line"></div>
+    <div class="axis-marker" id="horizontal-line"></div>
+
     <canvas id="canvas"></canvas>
 </body>
 <script src="main.js"></script>

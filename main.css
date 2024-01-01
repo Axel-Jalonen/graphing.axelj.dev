@@ -6,63 +6,69 @@
 
 body {
     background: black;
-    z-index: -10000;
+    width: 100vw;
+    height: 100vh;
+    z-index: -99;
 }
-
-
-#eq,
-#slider,
-#point_count,
-#testingMath,
-#point_follower {
+#ui-toggle-label {
     position: absolute;
-    left: 50%;
-    top: 100px;
-    translate: -50%;
+    font-size: inherit;
+    font-family: inherit;
+    color: white;
+    z-index: 2;
+    left: 10px;
+}
+#ui-toggle {
+    position: absolute;
+    z-index: 2;
+    top: 2.5px;
+    left: 70px;
+}
+#ui-toggle:checked ~ #ui {
+    display: none;
+}
+#ui-toggle:checked ~ .axis-marker {
+    display: none;
+}
+#ui {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 40%;
     font-size: 30px;
     background: black;
     color: white;
-    border: 1px solid white;
-    outline: none;
-    border-radius: 15px;
     z-index: 1;
     font-family: "Times New Roman", Times, serif;
     padding: 8px;
 }
-
-#point_follower {
-    top: 25px;
+#ui > input {
+    height: 50px;
+    padding: 10px;
+    background: black;
+    border: 2px solid white;
+    border-radius: 15px;
+    color: white;
+    font-size: inherit;
+    font-family: inherit;
 }
-
-#eq {
-    top: 100px;
-}
-
-#slider {
-    top: 150px;
-}
-
-#point_count {
-    top: 200px;
-}
-
-#verticalLine {
+.axis-marker {
     position: absolute;
+    background: grey;
+    z-index: -1;
+}
+#vertical-line {
     left: 50%;
-    translate: -50%;
+    transform: translateX(-50%);
     height: 100%;
     width: 2px;
-    z-index: -1;
-    background: grey;
 }
-
-#horizontalLine {
-    position: absolute;
-    background: grey;
-    top: calc(50% - 1px);
+#horizontal-line {
+    top: 50%;
+    transform: translateY(-50%);
     height: 2px;
     width: 100%;
-    z-index: -1;
 }
 
 #canvas {
