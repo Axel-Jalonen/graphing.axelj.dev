@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    background: black;
+    z-index: -10000;
+}
+
+
+#eq,
+#slider,
+#point_count,
+#testingMath,
+#point_follower {
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    translate: -50%;
+    font-size: 30px;
+    background: black;
+    color: white;
+    border: 1px solid white;
+    outline: none;
+    border-radius: 15px;
+    z-index: 1;
+    font-family: "Times New Roman", Times, serif;
+    padding: 8px;
+}
+
+#point_follower {
+    top: 25px;
+}
+
+#eq {
+    top: 100px;
+}
+
+#slider {
+    top: 150px;
+}
+
+#point_count {
+    top: 200px;
+}
+
+#verticalLine {
+    position: absolute;
+    left: 50%;
+    translate: -50%;
+    height: 100%;
+    width: 2px;
+    z-index: -1;
+    background: grey;
+}
+
+#horizontalLine {
+    position: absolute;
+    background: grey;
+    top: calc(50% - 1px);
+    height: 2px;
+    width: 100%;
+    z-index: -1;
+}
+
+#canvas {
+    z-index: 0;
+    position: absolute;
+}
+
+#testingMath {
+    height: 200px;
+    width: 300px;
+    z-index: 99;
+}
