@@ -10,7 +10,7 @@ const gl = canvas.getContext("webgl");
 document.addEventListener("DOMMouseScroll", handleScroll);
 document.addEventListener("mousewheel", handleScroll);
 function handleScroll(event) {
-    let increment = (1 / 25) * scale;
+    const increment = (1 / 25) * scale;
     const delta = Math.max(-1, Math.min(1, event.wheelDelta || -event.detail));
     scale -= delta > 0 ? increment : -increment;
     scaleDisplay.textContent = "Scale: " + Math.round(scale * 1000) / 1000;
@@ -82,9 +82,12 @@ function mapEquation(str) {
 
 function drawNewBuffer() {
     verticesPoints.length = 0;
+    const stepSize = 1 / pointCountInput.value;
+
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(0), gl.STATIC_DRAW);
-    pointCount.textContent = "Points: " + Math.round(2 / (1 / pointCountInput.value), 3);
-    for (let i = -1; i < 1; i += 1 / pointCountInput.value) {
+
+    pointCount.textContent = "Points: " + Math.round(2 / stepSize, 3);
+    for (let i = -1; i < 1; i += stepSize) {
         let x = i * scale;
         var mappedFunction = mapEquation(equationInput.value)
         y = eval(mappedFunction);
