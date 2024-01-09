@@ -10,6 +10,11 @@ body {
     height: 100vh;
     z-index: -99;
 }
+a {
+    font-family: monospace;
+    color: white;
+    font-size: 1rem;
+}
 #ui-toggle-label {
     position: absolute;
     font-size: inherit;

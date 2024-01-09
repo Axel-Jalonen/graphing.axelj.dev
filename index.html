@@ -2,26 +2,29 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link type="text/css" href="main.css" rel="stylesheet">
-    <title>axelj.dev > webgl-graphing</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link type="text/css" href="main.css" rel="stylesheet">
+  <title>axelj.dev > webgl-graphing</title>
 </head>
+
 <body>
-    <label for="ui-toggle" id="ui-toggle-label">Hide UI</label>
-    <input id="ui-toggle" type="checkbox" title="hide-ui"></input>
-    <div id="ui">
-      <div id="scale-display">Scale: 10</div>
-      <input id="equation-input" type="text"></input>
-      <div id="point-count">Points: 5000</div>
-      <input id="point-count-input" value="2500" type="range" min="1" max="10000"></input>
-    </div>
+  <label for="ui-toggle" id="ui-toggle-label">Hide UI</label>
+  <input id="ui-toggle" type="checkbox" title="hide-ui"></input>
+  <div id="ui">
+    <a href="./gallery/">img gallery</a>
+    <div id="scale-display">Scale: 10</div>
+    <input id="equation-input" type="text"></input>
+    <div id="point-count">Points: 5000</div>
+    <input id="point-count-input" value="2500" type="range" min="1" max="10000"></input>
+  </div>
 
-    <div class="axis-marker" id="vertical-line"></div>
-    <div class="axis-marker" id="horizontal-line"></div>
+  <div class="axis-marker" id="vertical-line"></div>
+  <div class="axis-marker" id="horizontal-line"></div>
 
-    <canvas id="canvas"></canvas>
+  <canvas id="canvas"></canvas>
 </body>
 <script src="main.js"></script>
+
 </html>
