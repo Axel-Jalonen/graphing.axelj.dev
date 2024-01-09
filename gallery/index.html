@@ -5,7 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebGL Graphing Gallery</title>
 </head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        display: flex;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    #container {
+        display: grid;
+        gap: 10px 10px;
+        grid-template-columns: repeat(2, minmax(120px, 1fr));
+        grid-auto-flow: dense;
+    }
+    img {
+        width: 100%;
+        border-radius: 15px;
+    }
+    .long {
+        /* Span two rows */
+        grid-column: span 2;
+    }
+    .tall {
+        /* Span two columns */
+        grid-row: span 2;
+    }
+    .regular {
+        /* Span one row and one column */
+        grid-row: span 1;
+        grid-column: span 1;
+    }
+</style>
 <body>
-    
+   <div id="container">
+        <img class="long" src="./images/Screenshot 2024-01-09 at 11.58.37.png"></img>
+        <img class="tall" src="./images/Screenshot 2024-01-09 at 11.59.02.png"></img>
+        <img class="long" src="./images/Screenshot 2024-01-09 at 11.59.47.png"></img>
+        <img class="long" src="./images/Screenshot 2024-01-09 at 12.00.05.png"></img>
+        <img class="regular" src="./images/Screenshot 2024-01-09 at 12.00.32.png"></img>
+        <img class="regular" src="./images/Screenshot 2024-01-09 at 12.36.09.png"></img>
+   </div> 
 </body>
 </html>
