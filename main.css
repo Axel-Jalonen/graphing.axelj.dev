@@ -15,6 +15,11 @@ a {
     color: white;
     font-size: 1rem;
 }
+.hint {
+	font-family: monospace;
+	color: white;
+	font-size: 1rem;
+}
 #ui-toggle-label {
     position: absolute;
     font-size: inherit;
